@@ -9,20 +9,24 @@ public class UIManager : MonoBehaviour
     public GameObject menuUI;
     public GameObject pauseUI;
     public GameObject optionsUI;
+    public GameObject gameUI;
 
     public void EnableMenuUI()
     {
         DisableAllUI();
+        gameUI.SetActive(false);
         menuUI.SetActive(true);
     }
     public void EnablePauseUI()
     {
         DisableAllUI();
+        gameUI.SetActive(true);
         pauseUI.SetActive(true);
     }
     public void EnableOptionsUI()
     {
         DisableAllUI();
+        gameUI.SetActive(false);
         optionsUI.SetActive(true);
     }
     public void DisableAllUI()

@@ -47,6 +47,7 @@ public class GameStateManager : MonoBehaviour
                 Time.timeScale = 0.0f;
                 break;
             case GameState.Game_State:
+                gameManager.uiManager.gameUI.SetActive(true);
                 gameManager.uiManager.DisableAllUI();
                 Time.timeScale = 1.0f;
                 break;
