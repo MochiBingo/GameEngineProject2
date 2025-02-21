@@ -45,19 +45,27 @@ public class GameStateManager : MonoBehaviour
             case GameState.Menu_State:
                 gameManager.uiManager.EnableMenuUI();
                 Time.timeScale = 0.0f;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
                 break;
             case GameState.Game_State:
                 gameManager.uiManager.gameUI.SetActive(true);
                 gameManager.uiManager.DisableAllUI();
                 Time.timeScale = 1.0f;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Confined;
                 break;
             case GameState.Pause_State:
                 gameManager.uiManager.EnablePauseUI();
                 Time.timeScale = 0.0f;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
                 break;
             case GameState.Options_State:
                 gameManager.uiManager.EnableOptionsUI();
                 Time.timeScale = 0.0f;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
                 break;
         }
     }
